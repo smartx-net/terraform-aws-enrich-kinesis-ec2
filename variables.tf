@@ -154,6 +154,12 @@ variable "assets_update_period" {
   }
 }
 
+variable "java_opts" {
+  description = "Custom Java Options"
+  default     = ""
+  type        = string
+}
+
 # --- Enrichment options
 #
 # To take full advantage of Snowplows enrichments should be activated to enhance and extend the data included
