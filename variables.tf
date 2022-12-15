@@ -154,6 +154,12 @@ variable "assets_update_period" {
   }
 }
 
+variable "extra_user_data" {
+  description = "Extra user data to run"
+  default     = ""
+  type        = string
+}
+
 variable "java_opts" {
   description = "Custom Java Options"
   default     = ""
