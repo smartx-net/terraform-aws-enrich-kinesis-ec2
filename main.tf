@@ -390,6 +390,8 @@ locals {
     resolver    = "dynamodb:${data.aws_region.current.name}/${aws_dynamodb_table.config.name}/snowplow_resolver"
     enrichments = "dynamodb:${data.aws_region.current.name}/${aws_dynamodb_table.config.name}/snowplow_enrichment_"
 
+    java_opts = var.java_opts
+
     telemetry_script = join("", module.telemetry.*.amazon_linux_2_user_data)
 
     cloudwatch_logs_enabled   = var.cloudwatch_logs_enabled
