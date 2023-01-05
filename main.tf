@@ -446,6 +446,8 @@ resource "aws_autoscaling_group" "asg" {
   max_size = var.max_size
   min_size = var.min_size
 
+  enabled_metrics = var.autoscaling_group_metrics
+
   launch_configuration = aws_launch_configuration.lc.name
 
   health_check_grace_period = 300
