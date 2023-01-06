@@ -418,6 +418,7 @@ resource "aws_launch_configuration" "lc" {
   iam_instance_profile = aws_iam_instance_profile.instance_profile.name
   security_groups      = [aws_security_group.sg.id]
   user_data            = local.user_data
+  spot_price           = var.spot_price
 
   # Note: Required if deployed in a public subnet
   associate_public_ip_address = var.associate_public_ip_address
