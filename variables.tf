@@ -54,6 +54,12 @@ variable "max_size" {
   type        = number
 }
 
+variable "spot_price" {
+  description = "The maximum price to use for reserving spot instances. (Optional; Default: On-demand price)"
+  default     = ""
+  type        = string
+}
+
 variable "autoscaling_group_metrics" {
     description = "The list of metrics to enable for the autoscaling group"
     default     = []
